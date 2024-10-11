@@ -1,0 +1,15 @@
+.btn {
+  border: none;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.btn.left {
+  left: -3rem;
+}
+
+.btn.right {
+  right: -3rem;
+}
