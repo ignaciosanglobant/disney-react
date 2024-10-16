@@ -1,24 +1,24 @@
 import Chevron from "../Chevron/Chevron";
 import "./style.css";
 
-const Card = () => {
+const Card = ({name, location, type, image, handleChange, index}) => {
   return (
     <div className="container">
-      {/* <Chevron direction="left" /> */}
+      {index === 0 ? '' : <Chevron direction="left" action={handleChange} />}
       <img
-        src="https://rickandmortyapi.com/api/character/avatar/361.jpeg"
+        src={image}
         alt="character image"
       />
       <div className="data">
-        <h1>Toxic Rick</h1>
+        <h1>{name}</h1>
         <p>
-          <strong>Location:</strong> Earth
+          <strong>Location:</strong> {location}
         </p>
         <p>
-          <strong>Type</strong> Rick&apos;s Toxic Side
+          <strong>Type</strong> {type}
         </p>
       </div>
-      {/* <Chevron /> */}
+      <Chevron direction='right' action={handleChange}/>
     </div>
   );
 };

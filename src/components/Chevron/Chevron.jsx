@@ -1,9 +1,9 @@
 import "./style.css";
 
-const Chevron = ({ direction, onClick }) => {
+const Chevron = ({ direction, action }) => {
   if (direction === "left") {
     return (
-      <button onClick={onClick} className=" btn left">
+      <button onClick={() => action(direction)} className=" btn left">
         <svg
           width="50px"
           height="50px"
@@ -23,7 +23,7 @@ const Chevron = ({ direction, onClick }) => {
     );
   }
   return (
-    <button onClick={onClick} className="btn right">
+    <button onClick={() => action(direction)} className="btn right">
       <svg
         width="50px"
         height="50px"
