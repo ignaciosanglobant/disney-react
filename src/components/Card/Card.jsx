@@ -4,7 +4,7 @@ import "./style.css";
 const Card = ({name, location, type, image, handleChange, index}) => {
   return (
     <div className="container">
-      {index === 0 ? '' : <Chevron direction="left" action={handleChange} />}
+      {index === 0 ? null : <Chevron direction="left" action={handleChange} />}
       <img
         src={image}
         alt="character image"
